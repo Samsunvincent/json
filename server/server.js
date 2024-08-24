@@ -16,11 +16,11 @@ const server  = http.createServer((req,res)=>{
         res.writeHead(200,{'Content-Type' : 'text/html'});
         res.end(fs.readFileSync("../client/index.html"))
     }
-    if(parsed_url.pathname === '/json'){
+    else if(parsed_url.pathname === '/json'){
         res.writeHead(200,{'Content-Type' : 'text/json'})
         res.end(fs.readFileSync('../server/datas.json'))
     }
-    if(parsed_url.pathname === '/script'){
+    else if(parsed_url.pathname === '/index.js'){
         res.writeHead(200,{'Content-Type' : 'text/javascript'});
         res.end(fs.readFileSync('../client/index.js'));
     }

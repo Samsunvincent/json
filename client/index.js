@@ -1,4 +1,4 @@
-async function getdata(){
+async function fetchdata(){
     try {
         const datas = await fetch('http://localhost:3000/json')
         let parsed_datas = await datas.json();
@@ -25,4 +25,4 @@ async function getdata(){
         console.log("error",error)
     }
 }
-getdata()
+fetchdata()
