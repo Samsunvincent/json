@@ -17,13 +17,20 @@
             crossorigin="anonymous"
         />
     </head>
+    <style>
+        .box{
+            display: grid;
+            grid-template-columns: repeat(3,400px);
+            gap: 30px;
+        }
+    </style>
 
     <body>
         <header>
             <!-- place navbar here -->
         </header>
         <main>
-            <div id="data-container"></div>
+            <div id="data-container" class=" container box p-5"></div>
         </main>
         <footer>
             <!-- place footer here -->
